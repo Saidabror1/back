@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+<div>
+   <ul>
+   <h3>Name:</h3>
+   {{#each ism}}
+      <li><a href="/filter/name/{{this}}">{{this}}</a></li>
+   {{/each}}
+</ul>
+
+
+</div>
+
+
+
+<h2>DATA length : {{ length }}</h2>
+<a href="/">Add data</a><br><br>
+<table style="width:100%">
+   <tr>
+      <td><b>Ism</b></td>
+      <td><b>Telefon</b></td>
+      <td><b>EDIT</b></td>
+   </tr>
+   {{#each data}}
+      <tr>
+         <td><a href="/update/{{ id }}">{{ name }}</a></td>
+         <td><a href="/update/{{ id }}">{{ telefon }}</a></td>
+         <td><a href="/delete/{{id}}">DELETE</a></td>
+      </tr>
+   {{/each}}
+</table>
